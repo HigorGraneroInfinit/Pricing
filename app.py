@@ -59,12 +59,9 @@ def calcular_precificacao():
         st.write(f"**Média de Chamados por Usuário:** {chamados_usuario} chamados")
 
         valor_total_venda_ano = ( preco_venda_anual + (custo_banco_horas_2 * 12) )
-        valor_total_venda_ano = valor_total_venda_ano + 20%
+        valor_total_venda_ano = valor_total_venda_ano * ( 1 + ( 20 / 100 ) )
         # valor_total_venda_mes = custo_banco_horas_2 + preco_venda_mensal
         valor_total_venda_mes = valor_total_venda_ano / 12
-
-        
-        
         
         st.subheader("Investimento - Ferramenta")
         st.write(f"**Setup Fee - Ferramenta(implementação de duas semanas):** R$ {setup_fee:,.2f}")
