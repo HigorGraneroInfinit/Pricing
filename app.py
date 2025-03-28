@@ -66,7 +66,7 @@ def calcular_precificacao():
         st.subheader("Investimento - Ferramenta")
         st.write(f"**Setup Fee - Ferramenta(implementação de duas semanas):** R$ {setup_fee:,.2f}")
         st.write(f"**Mensalidade(com suporte de 40h/mês):** R$ {valor_total_venda_mes:,.2f}")
-        st.write(f"**Anuidade: ** R$ {valor_total_venda_ano:,.2f}")
+        st.write(f"**Anuidade:** R$ {valor_total_venda_ano:,.2f}")
 
         # Exibição gráfica de Custo vs Venda (Opcional)
         # fig, ax = plt.subplots()
