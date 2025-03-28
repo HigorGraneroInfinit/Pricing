@@ -54,27 +54,22 @@ def calcular_precificacao():
         margem_anual = ((preco_venda_anual - custo_mensal * 12) / (preco_venda_anual)) * 100
 
         # Exibir os valores calculados
-        st.subheader("1 - Capacidade da Ferramenta")
+        st.subheader("Capacidade - Ferramenta")
         st.write(f"**Capacidade de Chamados:** {capacidade} chamados")
         st.write(f"**Média de Chamados por Usuário:** {chamados_usuario} chamados")
 
-        st.subheader("2 - Custo da Ferramenta - Prime Control")
-        st.write(f"**Custo Mensal:** R$ {custo_mensal:,.2f}")
-        st.write(f"**Custo de Implementação (80h de Setup):** R$ {custo_implementacao:,.2f}")
-        st.write(f"**Custo de Sustentação (40h/mês):** R$ {custo_banco_horas:,.2f}")
+        valor_total_venda_ano = ( preco_venda_anual + (custo_banco_horas_2 * 12) )
+        valor_total_venda_ano = valor_total_venda_ano + 20%
+        # valor_total_venda_mes = custo_banco_horas_2 + preco_venda_mensal
+        valor_total_venda_mes = valor_total_venda_ano / 12
 
-        st.subheader("3 - Preço da Ferramenta - Cliente")
-        st.write(f"**Setup Fee - Ferramenta:** R$ {setup_fee:,.2f}")
-        st.write(f"**Preço de Venda Mensal (Markup 10x) - Ferramenta:** R$ {preco_venda_mensal:,.2f}")
-        st.write(f"**Preço de Venda Anual - Ferramenta:** R$ {preco_venda_anual:,.2f}")
-        st.write(f"**Banco de Horas (40h/mês) para Melhorias e Integrações: - Suporte** R$ {custo_banco_horas_2:,.2f}")
-
-        valor_total_venda_ano = ( setup_fee + preco_venda_anual + (custo_banco_horas_2 * 12) )
-        valor_total_venda_mes = custo_banco_horas_2 + preco_venda_mensal
-
-        st.subheader("4 - Valor Final - Cliente")
-        st.write(f"**Valor Total Final - Mês:** R$ {valor_total_venda_mes:,.2f}")
-        st.write(f"**Valor Total Final - Ano:** R$ {valor_total_venda_ano:,.2f}")
+        
+        
+        
+        st.subheader("Investimento - Ferramenta")
+        st.write(f"**Setup Fee - Ferramenta(implementação de duas semanas):** R$ {setup_fee:,.2f}")
+        st.write(f"**Mensalidade(com suporte de 40h/mês):** R$ {valor_total_venda_mes:,.2f}")
+        st.write(f"**Anuidade: ** R$ {valor_total_venda_ano:,.2f}")
 
         # Exibição gráfica de Custo vs Venda (Opcional)
         # fig, ax = plt.subplots()
