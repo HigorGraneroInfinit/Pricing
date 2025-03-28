@@ -1,7 +1,7 @@
 import streamlit as st
 
 def calcular_precificacao():
-    st.title("💰 Calculadora de Preço - Novo Produto")
+    st.title("💰 Calculadora - SAP ITSM")
     
     # Tabela de preços de acordo com o número de usuários e chamados
     precos = {
