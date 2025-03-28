@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 
 def calcular_precificacao():
     st.title("💰 Calculadora de Preço - Novo Produto")
